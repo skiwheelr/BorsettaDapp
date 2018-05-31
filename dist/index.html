@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+       <head>
+              <meta charset="UTF-8" />
+              <title>Complete Package</title>
+              <link rel="stylesheet" href="../src/css/index.css">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+              <!---  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+              <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+              <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/web3@0.20.1/dist/web3.min.js"></script>
+              <script src="./node_modules/web3/dist/web3.min.js"></script>
+              <script src="/usr/local/lib/node_modules/web3/dist/web3.min.js"></script>--->
+              <!-- <script src="./web3.js-develop/dist/web3.min.js"></script> -->
+
+              <script> //create a web3 object connected to our NodETH node
+              //var web3 = new Web3(new Web3.providers.HttpProvider("localhost:8545"));
+              var Eth = require('web3-eth');
+              // "Eth.providers.givenProvider" will be set if in an Ethereum supported browser.
+              var eth = new Eth(Eth.givenProvider || 'ws://some.local-or-remote.node:8546');
+              // or using the web3 umbrella package
+              //  var Web3 = require('web3');
+              //  var web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546');
+              </script>
+      </head>
+
+      <div class = ghassar>
+      <h1 align="center"> Borsetta Title Generator</h1>
+      <body>
+        <br>
+        <br>
+      IGI: <input type="text" id="mintName"></input>
+      Address To: <input type="text" id="addressTo"></input>
+        <br>
+        <br>
+      <button id="bt0" onclick=mint()>Mint</button>
+      <button id="bt1" onclick=send()>Send</button>
+              <!--  <button id="get" onclick=getAccounts()>Pull My Accounts</button> -->
+        <br>
+        <br>
+            <div class= side>    <h5>IGI Numbers On Chain</h5>
+              //Render data from blockchain with call function.
+              <div class= greenback id="d1">19398<div>
+              <div class= fback id="d2">334322</div>
+              <div class= orangeback id="d3">348989</div>
+              <div class= .greenback id="d4">203920</div>
+              </div>
+              <div id="root"></div>
+              <script type="text/babel">
+              ReactDOM.render(
+              document.getElementById('root')  );
+            </div>
+              </script>
+
+      </body>
+
+<script>
+        function send(){
+            var destination = document.getElementById("addressTo").value;
+            var identifier = document.getElementById('mintName').value
+            web3.eth.sign(identifier, destination).then(console.log);
+            alert("Title Sent to:" + destination);
+        }
+
+        function mint(){
+            var destination = document.getElementById("addressTo").value;
+            var identifier = document.getElementById('mintName').value
+                function web3.eth.getAccounts([callback]){
+                    if (document.getElementById('addressTo').value) { //Send identifier to this address}
+                    alert("Title with following ID already exits:" + identifier);
+
+                        else {
+                            web3.eth.accounts.create();{
+                            address: "0xb8CE9ab6943e0eCED004cDe8e3bBed6568B2Fa01",
+                            privateKey: "0x348ce564d427a3311b6536bbcff9390d69395b06ed6c486954e971d960fe8709",
+                            signTransaction: function(tx){...},
+                            sign: function(data){...},
+                            encrypt: function(password){...}
+                            //& send transaction.
+                            alert("Title with following ID minted:" + identifier);
+                            }
+                        }
+                    }
+                }
+        }
+  </script>
+  <script>
+          if (typeof web3 !== 'undefined') {
+              web3 = new Web3(web3.currentProvider);
+          } else {
+              // set the provider you want from Web3.providers
+              web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+          }
+  </script>
+</html>

@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+}
+body {
+  background: url(ant.jpg);
+  background-size: contain;
+}
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+button{
+  width:250px;
+
+}
+.ghassar {
+    margin-left: 100px;
+    border: 2px solid;
+    padding: 10px 40px;
+    width: 800px;
+    border-radius: 50px;
+    background: url(diamond.jpg);
+    background-blend-mode: lighten;
+}
+.side {
+  position: relative;
+}
+.orangeback {
+  background-color: orange;
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21
+}
+.fback {
+  background-color: fuchsia;
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21
+}
+.greenback {
+  background-color: green;
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21
+}
+.redback {
+  background-color: red;
+  width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21
+}
+.maintitle{
+  width: 500px;
+  margin: auto;
+}
